@@ -21,6 +21,13 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/HTML.zip'
 Plugin 'vim-scripts/rails.vim'
 Plugin 'vim-scripts/python.vim'
+Plugin 'tomasr/molokai'
+Plugin 'kien/ctrlp.vim'
+Plugin 'a.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mbbill/echofunc'
+
+
 
 
 call vundle#end()            " required
@@ -31,12 +38,15 @@ filetype plugin on
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"  Launch vim and run :PluginInstall
-" To install from command line: vim +PluginInstall +qall
+"
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
-
+" vim +PluginInstall +qall
+map <C-n> :NERDTreeToggle<CR>
+"ctrlp 配置
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:molokai_original = 1
 "vim 配置文件详解"
 syntax enable             " 
 syntax on   　　　　　    "  自动语法高亮 
