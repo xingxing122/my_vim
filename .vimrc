@@ -26,6 +26,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'a.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mbbill/echofunc'
+Plugin 'vim-scripts/The-NERD-tree'
+
 
 
 
@@ -42,11 +44,23 @@ filetype plugin on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 " vim +PluginInstall +qall
-map <C-n> :NERDTreeToggle<CR>
 "ctrlp 配置
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:molokai_original = 1
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip 
+let g:ctrlp_user_command = 'find %s -type f' 
+
+"nerd 
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-R> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q| endif
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+
 "vim 配置文件详解"
 syntax enable             " 
 syntax on   　　　　　    "  自动语法高亮 
