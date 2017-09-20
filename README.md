@@ -8,11 +8,11 @@
         ctrlp https://github.com/kien/ctrlp.vim 
 #####  5. 语言补全
    
-  YouCompleteMe [https://github.com/Valloric/YouCompleteMe]() 
+ YouCompleteMe [https://github.com/Valloric/YouCompleteMe]() 
         
        安装的时候有点费事，按照文档一步一步安装即可，
 
-#####6 例子
+#####  6 例子
 
    ![](images/goimages.png)
    
