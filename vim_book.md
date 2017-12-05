@@ -88,8 +88,16 @@
     map  uf  <esc> :Unite file<CR> 
     map  uf  <esc> :Unite file buffer<CR>
     
-           
-
+## 列的多行注释 
+    
+    按esc 进入命令行模式，按下ctrl+v 进入列模式
+    在行首使用上下键选择多行注释 
+    按下键盘键 “I” 键进入插入模式
+    然后输入注释符("//"、“#”)等
+    然后按下“Esc” 键 
+    
+    
+              
 
 
 
